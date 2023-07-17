@@ -25,6 +25,7 @@ func (ts *TaskStore) Add(t *entity.Task) (entity.TaskID, error) {
 	return t.ID, nil
 }
 
+// All はソート済みのタスク一覧を返す
 func (ts *TaskStore) All() entity.Tasks {
 	tasks := make([]*entity.Task, len(ts.Tasks))
 	for i, t := range ts.Tasks {
